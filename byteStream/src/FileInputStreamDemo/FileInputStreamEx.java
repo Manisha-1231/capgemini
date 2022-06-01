@@ -1,0 +1,19 @@
+package FileInputStreamDemo;
+
+import java.io.FileInputStream;
+
+public class FileInputStreamEx {
+	public static void main(String args[]) {
+
+		try {
+			FileInputStream fin = new FileInputStream("/Users/sivakasi/Desktop/untitled folder/ds.txt");
+			int i = 0;
+			while ((i = fin.read()) != -1) {
+				System.out.print((char) i);
+			}
+			fin.close();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+	}
+}
